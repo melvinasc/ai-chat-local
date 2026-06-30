@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chat (Local, Free)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>AI Chat</h1>
+      <span class="status" id="status">Not loaded</span>
+    </header>
+
+    <div class="chat-window" id="chatWindow">
+      <div class="msg bot">
+        Hi! Click "Load Model" to download the AI model into your browser (one-time, a few hundred MB to a few GB depending on model). Everything runs locally — nothing is sent to a server. Try: "weather in Sydney", "calculate 24*7", or "search for Bitcoin price".
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <button id="loadBtn">Load Model</button>
+      <select id="modelSelect">
+        <option value="Llama-3.2-3B-Instruct-q4f16_1-MLC">Llama 3.2 3B (better quality, ~2GB)</option>
+        <option value="Phi-3.5-mini-instruct-q4f16_1-MLC">Phi 3.5 Mini (faster, ~2.4GB)</option>
+        <option value="Qwen2.5-1.5B-Instruct-q4f16_1-MLC">Qwen2.5 1.5B (smallest, ~1GB)</option>
+      </select>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="userInput" placeholder="Type a message..." disabled>
+      <button id="sendBtn" disabled>Send</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
